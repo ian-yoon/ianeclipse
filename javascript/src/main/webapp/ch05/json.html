@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.6.0.min.js"></script>
+<script>
+$(function() {
+	str = "[{'name':'Hong', 'age':'21'}, {'name':'Kim', 'age':'28'}, {'name':'Kang', 'age':'35'}]";
+	students = eval(str);
+	names = "";
+	ages = "";
+	for (i = 0; i < students.length; i++) {
+		names += students[i].name + " ";
+		ages += students[i].age + " ";
+	}
+	$("#names").html(names);
+	$("#ages").html(ages);
+});
+</script>
+
+</head>
+<body>
+
+<h4>Student List</h4>
+<p style="background-color: pink;">
+	이름: <span id="names"></span><br>
+	나이: <span id="ages"	></span>
+</p>
+
+</body>
+</html>

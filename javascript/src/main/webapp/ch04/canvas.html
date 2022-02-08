@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function init() {
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.fillStyle="rgb(132, 209, 192)"; //#ff0000
+	context.fillRect(10, 10, 200, 200);
+	// context.rect(10, 10, 100, 100);
+	// context.stroke(); rect()쓰려면 얘도 같이 써야 함
+}
+</script>
+<style>
+body { margin:0 }
+</style>
+
+</head>
+<body onload="init()">
+
+<canvas id="myCanvas" width="500px" height="300px" style="border:1px solid red;"></canvas>
+
+</body>
+</html>

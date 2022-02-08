@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function init() {
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.beginPath();
+	context.rect(50, 50, 100, 100);
+	context.fillStyle="teal";
+	context.fill();
+	context.beginPath();
+	context.rect(150, 150, 100, 120);
+	context.fillStyle="rgb(132, 209, 192)";
+	context.fill();
+}
+</script>
+<style>
+body { margin:0; }
+</style>
+
+</head>
+<body onload="init()">
+
+<canvas id="myCanvas" width="500px" height="500px"></canvas>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var context;
+var mx=3, my=4;
+var x=50, y=50;
+function draw() {
+	canvas = document.getElementById("myCanvas");
+	context = canvas.getContext("2d");
+	context.clearRect(0, 0, 300, 300);
+	context.beginPath();
+	context.fillStyle="teal";
+	context.arc(x, y, 10, 0, Math.PI*2, false);
+	context.closePath();
+	context.fill();
+	if (x<(0+10)||x>(300-10)) {
+		mx=-mx;
+	}
+	if (y<(0+10)||y>(300-10)) {
+		my=-my;
+	}
+	x += mx;
+	y += my;
+}
+setInterval(draw, 15);
+</script>
+<style>
+canvas{
+background-color: rgb(132, 209, 192);
+}
+</style>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+</body>
+</html>

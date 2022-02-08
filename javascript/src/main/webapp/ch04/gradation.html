@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function init() {
+	canvas = document.getElementById("myCanvas");
+	context = canvas.getContext("2d");
+	var grad = context.createLinearGradient(0, 0, 200, 0);
+	grad.addColorStop(0,"aqua");
+	grad.addColorStop(0.5, "teal");
+	grad.addColorStop(1,"rgb(132, 209, 192)");
+	context.fillStyle=grad;
+	context.fillRect(10, 10, 180, 90);
+}
+</script>
+
+</head>
+<body onload="init()">
+<canvas id="myCanvas" width="300" height="200"></canvas>
+
+</body>
+</html>

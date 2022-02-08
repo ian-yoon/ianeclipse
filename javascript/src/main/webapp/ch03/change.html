@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function get() {
+	div1 = document.getElementById("div1").innerHTML;
+	alert(div1);
+}
+function set(msg) {
+	document.getElementById("div1").innerHTML = msg;
+}
+function changeImage() {
+	img = document.getElementById("img1");
+	img.src = "guinea.jpg";
+	img.style.width = "50%";
+	img.style.height = "50%";
+}
+function changeStyle() {
+	div1 = document.getElementById("div1");
+	div1.style.coor = "red";
+	div1.style.backgroundColor = "yellow";
+	div1.style.fontSize = "30px";
+	div1.style.fontStyle = "italic";
+}
+function show() {
+	document.getElementById("img1").style.visibility = "visible";
+}
+function hide() {
+	document.getElementById("img1").style.visibility = "hidden";
+}
+</script>
+<style>
+#div1 {
+background-color: teal;
+}
+</style>
+</head>
+<body>
+
+<div id="div1">div</div>
+<a href="#" onclick="get()">get div</a>
+<a href="#" onclick="set('change div')">setdiv</a>
+<br>
+<img id="img1" src="hamster.jpg" width="30%" height="30%">
+<br>
+<input type="button" value="change image" onclick="changeImage()">
+<input type="button" value="hide" onclick="hide()">
+<input type="button" value="show" onclick="show()">
+<br>
+<input type="button" value="change text" onclick="changeStyle()">
+
+</body>
+</html>

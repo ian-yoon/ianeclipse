@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.6.0.min.js"></script>
+<script>
+$(function() {
+	$("#small a").click(function(e) {
+		e.preventDefault();
+		url = $(this).attr("href");
+		$("#large img").attr("src", url);
+	});
+});
+</script>
+<style>
+#large img { width: 420px; height: 420px; }
+ul { padding: 0; margin: 0; }
+ul li { list-style: none; display: inline; }
+ul img { width: 100px; height: 100px;}
+</style>
+
+</head>
+<body>
+
+<div id="large">
+<a href="#"><img src="../images/guinea.jpg"></a>
+</div>
+<div id="small">
+	<ul>
+		<li><a href="../images/guinea.jpg"><img src="../images/guinea.jpg"></a></li>
+		<li><a href="../images/hamster.jpg"><img src="../images/hamster.jpg"></a></li>
+		<li><a href="../images/panda.jpg"><img src="../images/panda.jpg"></a></li>
+		<li><a href="../images/jervyll.jpg"><img src="../images/jervyll.jpg"></a></li>
+	</ul>
+</div>
+
+</body>
+</html>

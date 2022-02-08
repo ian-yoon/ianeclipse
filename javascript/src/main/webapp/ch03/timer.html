@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var timer; // 전역 변수
+function msg() {
+	console.log("msg 함수 호출...");
+}
+function start() {
+	timer = setInterval("msg()", 1000);
+}
+function stop() {
+	clearInterval(timer);
+}
+</script>
+</head>
+<body>
+	<button onclick="start()">start timer</button>
+	<button onclick="stop()">stop timer</button>
+</body>
+</html>

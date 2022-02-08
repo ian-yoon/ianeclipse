@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function img_view() {
+	var img1 = document.getElementById("img1");
+	var div1 = document.getElementById("div1");
+	div1.innerHTML = "<img src=" + img1.value + " width='300px' height='300px'>";
+}
+</script>
+</head>
+<body>
+
+<table style="width: 400px;" "border="1";>
+	<tr align="center" valign="middle">
+		<td width="150px">
+			<select id="img1" size="3" onchange="img_view()">
+				<option value="guinea.jpg">기니피그</option>
+				<option value="hamster.jpg">햄스터</option>
+				<option value="perfume.jpg">향수</option>
+			</select>
+		</td>
+		<td>
+			<div id="div1"><img src="guinea.jpg" width="300px" height="300px"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
