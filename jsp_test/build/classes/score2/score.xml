@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="score">
+<select id="list" resultType="score.ScoreDTO">
+	select * from score
+</select>
+<select id="insert">
+	insert into score (s_num, name, kor, eng, math) values (#{s_num}, #{name}, #{kor}, #{eng}, #{math})
+</select>
+</mapper>
